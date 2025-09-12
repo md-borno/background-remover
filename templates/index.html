@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Background Remover Tool</h1>
+    <p class="instructions">Upload an image to remove its background instantly</p>
+    
+    <div class="container">
+        <div class="upload-section">
+            <form method="post" enctype="multipart/form-data" id="uploadForm">
+                <input type="file" name="image" id="imageInput" accept="image/*" class="input-btn" required >
+                <button type="submit" class="upload-btn">Remove Background</button>
+            </form>
+        </div>
+        
+        {% if output_image %}
+        <div class="images-container">
+            <div class="image-card">
+                <h3>Original Image</h3>
+                <div class="image-wrapper">
+                    <img src="data:image/png;base64,{{ input_image }}" alt="Original Image">
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <h3>Background Removed</h3>
+                <div class="image-wrapper">
+                    <img src="data:image/png;base64,{{ output_image }}" alt="Processed Image">
+                </div>
+                <a href="data:image/png;base64,{{ output_image }}" download="removed_background.png" class="download-btn">Download Image</a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // Basic form validation
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            const fileInput = document.getElementById('imageInput');
+            if (fileInput.files.length === 0) {
+                e.preventDefault();
+                alert('Please select an image first');
+            }
+        });
+    </script>
+</body>
+</html>
