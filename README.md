@@ -26,7 +26,7 @@ This app uses a **lightweight U2Net model (`u2netp`)** for faster processing and
 ![Original Image](output2.png)  
 *Original Image*  
 
-![Background Removed](output2.png)  
+![Background Removed](output1.png)  
 *Background Removed*
 
 ---
