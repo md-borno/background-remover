@@ -23,7 +23,10 @@ This app uses a **lightweight U2Net model (`u2netp`)** for faster processing and
 
 ## Demo
 
-![Background Removed](screenshots/output.png)  
+![Original Image](output2.png)  
+*Original Image*  
+
+![Background Removed](output2.png)  
 *Background Removed*
 
 ---
