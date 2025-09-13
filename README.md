@@ -23,11 +23,14 @@ This app uses a **lightweight U2Net model (`u2netp`)** for faster processing and
 
 ## Demo
 
-![Original Image](output.png)  
-*Original Image*  
+<p align="center">
+  <img src="output.png" alt="Original Image" width="300">
+  <img src="output1.png" alt="Background Removed" width="300">
+</p>
+<p align="center">
+  <strong>Original Image</strong> &nbsp;&nbsp;&nbsp; <strong>Background Removed</strong>
+</p>
 
-![Background Removed](output1.png)  
-*Background Removed*
 
 ---
 
@@ -36,7 +39,7 @@ This app uses a **lightweight U2Net model (`u2netp`)** for faster processing and
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/background-remover.git
+git clone https://github.com/yourusername/background-remover.git](https://github.com/md-borno/background-remover.git
 cd background-remover
 ````
 
